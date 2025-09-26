@@ -1,297 +1,181 @@
 
 
 
-
-
-
-// import { useState } from 'react';
-// import axios from 'axios';
-// import { Link } from "react-router";
-
-// const SideBar = () => {
-//     const [logoApi, setLogoApi] = useState(null);
-//     const [itemIndex, setItemIndex] = useState(null);
-//     const [sidebarOpen, setSidebarOpen] = useState(false);
-
-
-
-//     const handleClick = (index) => {
-//         setItemIndex(index);
-//         setSidebarOpen(!sidebarOpen);
-//     };
-
-//     const menuItems = [
-
-//         {
-//             title: 'Logo',
-//             icon: 'fa-solid fa-image',
-//             subItems: [
-//                 { title: 'Logo List', link: '/dashboard/logo-list' },
-//             ],
-//         },
-//         {
-//             title: 'Banner',
-//             icon: 'fa-solid fa-layer-group',
-
-//             subItems: [
-//                 { title: 'Banner List', link: '/dashboard/banner-list' },
-//             ],
-//         },
-//         {
-//             title: 'Location',
-//             icon: 'fa-solid fa-location-dot',
-
-//             subItems: [
-//                 { title: 'Country List', link: '/dashboard/country-list' },
-//                 { title: 'States List', link: '/dashboard/state-list' },
-//                 { title: 'City List', link: '/dashboard/city-list' },
-//             ],
-//         },
-//         {
-//             title: 'Category',
-//             icon: 'fa-solid fa-layer-group',
-
-//             subItems: [
-//                 { title: 'Category List', link: '/dashboard/category-list' },
-//             ],
-//         },
-//         {
-//             title: 'Sub Category',
-//             icon: 'fa fa-list-alt',
-//             subItems: [
-//                 { title: 'Sub Category List', link: '/dashboard/sub-category-list' },
-//             ],
-//         },
-
-//         {
-//             title: 'Products',
-//             icon: 'fa-solid fa-cart-shopping',
-//             subItems: [
-//                 { title: 'Product List', link: '/dashboard/product-list' },
-//             ],
-//         },
-
-//         {
-//             title: 'Customer',
-//             icon: 'fa-solid fa-users',
-//             subItems: [
-//                 { title: 'Add Customer', link: '/dashboard/add-customer' },
-//                 { title: 'Customer List', link: '/dashboard/customer-list' },
-//             ],
-//         },
-//         {
-//             title: 'Change Password',
-//             icon: 'fa-solid fa-key',
-//             link: '/dashboard/change-password',
-//         },
-
-//         {
-//             title: 'Order History List',
-//             icon: 'fas fa-history',
-//             link: '/dashboard/order-list',
-//         },
-
-
-
-//         {
-//             title: 'Blog',
-//             icon: 'fa-solid fa fa-envelope',
-//             subItems: [
-//                 { title: 'Post List', link: '/dashboard/post-list' },
-//             ],
-//         },
-
-
-//     ];
-
-//     return (
-//         <aside>
-//             <div className="sidebar border-end bg-white overflow-hidden sticky-top" id="sidebar">
-//                 <div className="sidebar-header d-flex align-items-center justify-content-between ps-4">
-//                     <div className="logo">
-//                         <img
-//                             className="default-logo"
-//                             // src={logoApi ? logoApi[1]?.logo_img : "/img/pixer_dark.webp"}
-//                             src="https://www.sigmasoftwares.org/images/logo.gif"
-//                             width="115"
-//                             alt="Logo"
-//                         />
-//                         <img
-//                             className="collapsed-logo"
-//                             // src={logoApi ? logoApi[3]?.logo_img : "/img/pixer-collapse-logo.webp"}
-//                             src="https://www.sigmasoftwares.org/images/logo.gif"
-//                             alt="Logo"
-//                             style={{ width: '28px' }}
-//                         />
-//                     </div>
-//                     <div>
-//                         <button className="btn d-md-none" type="button">
-//                             <div className="icon icon-sm sidebar-close-btn">
-//                                 <i className="fa-solid fa-close"></i>
-//                             </div>
-//                         </button>
-//                     </div>
-//                 </div>
-//                 <div className="h-100 overflow-auto p-4" id="sidebar-scroller">
-//                     <ul className="menu">
-//                         <li className="menu-item">
-//                             <Link to="/" className="menu-link active">
-//                                 <span className="menu-icon">
-//                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none">
-//                                         <path fill="currentColor" d="M8.75 4.375v3.75a.625.625 0 0 1-.625.625h-3.75a.625.625 0 0 1-.625-.625v-3.75a.625.625 0 0 1 .625-.625h3.75a.625.625 0 0 1 .625.625Zm6.875-.625h-3.75a.625.625 0 0 0-.625.625v3.75a.625.625 0 0 0 .625.625h3.75a.625.625 0 0 0 .625-.625v-3.75a.625.625 0 0 0-.625-.625Zm-7.5 7.5h-3.75a.625.625 0 0 0-.625.625v3.75a.625.625 0 0 0 .625.625h3.75a.625.625 0 0 0 .625-.625v-3.75a.625.625 0 0 0-.625-.625Zm7.5 0h-3.75a.624.624 0 0 0-.625.625v3.75a.624.624 0 0 0 .625.625h3.75a.624.624 0 0 0 .625-.625v-3.75a.624.624 0 0 0-.625-.625Z" opacity="0.2"></path>
-//                                     </svg>
-//                                 </span>
-//                                 <span className="menu-text">Dashboard</span>
-//                             </Link>
-//                         </li>
-//                         {menuItems.map((item, index) => (
-//                             <li key={index} className={`menu-item ${item.subItems ? ` has-menu-sub ${sidebarOpen && itemIndex === index ? 'open' : ''}` : ''}`}>
-//                                 <Link to={item.link || '#'} className="menu-link" onClick={() => handleClick(index)}>
-//                                     <span className="menu-icon"><i className={item.icon}></i></span>
-//                                     <span className="menu-text">{item.title}</span>
-//                                 </Link>
-//                                 {item.subItems && (
-//                                     <ul className="menu-sub">
-//                                         {item.subItems.map((subItem, subIndex) => (
-//                                             <li key={subIndex} className="menu-item">
-//                                                 <Link to={subItem.link} className="menu-link">{subItem.title}</Link>
-//                                             </li>
-//                                         ))}
-//                                     </ul>
-//                                 )}
-//                             </li>
-//                         ))}
-//                     </ul>
-//                 </div>
-//             </div>
-//         </aside>
-//     );
-// };
-
-// export default SideBar;
-
-
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { Link } from "react-router-dom";
-import { useGetLogoQuery } from '../store/features/logo/logoApi';
-import BASE_URL from '../utils/imageConfig';
+
+import { Link } from "react-router";
+
 const SideBar = () => {
+    const [logoApi, setLogoApi] = useState(null);
     const [itemIndex, setItemIndex] = useState(null);
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    const { data: logos, isLoading, error, refetch } = useGetLogoQuery();
 
-    // console.log("logo is ======>", logos)
 
-    const { userInfo } = useSelector(state => state.auth);
-    const userRole = userInfo?.role; // Get user role from Redux
+
 
     const handleClick = (index) => {
         setItemIndex(index);
         setSidebarOpen(!sidebarOpen);
     };
 
-    // Define menu items based on roles
-    const menuItemsByRole = {
-        admin: [
-            { title: 'Dashboard', icon: 'fa-solid fa-chart-line', link: '/dashboard' },
-            { title: 'Logo', icon: 'fa-solid fa-image', subItems: [{ title: 'Logo List', link: '/dashboard/logo-list' }] },
-            // { title: 'Banner', icon: 'fa-solid fa-layer-group', subItems: [{ title: 'Banner List', link: '/dashboard/banner-list' }] },
-            {
-                title: 'Location', icon: 'fa-solid fa-location-dot', subItems: [
-                    { title: 'Country List', link: '/dashboard/country-list' },
-                    { title: 'State List', link: '/dashboard/state-list' },
-                    { title: 'City List', link: '/dashboard/city-list' },
-                ]
-            },
-            { title: 'Category', icon: 'fa-solid fa-layer-group', subItems: [{ title: 'Category List', link: '/dashboard/category-list' }] },
-            { title: 'Sub Category', icon: 'fa fa-list-alt', subItems: [{ title: 'Sub Category List', link: '/dashboard/sub-category-list' }] },
-            { title: 'Products', icon: 'fa-solid fa-cart-shopping', subItems: [{ title: 'Product List', link: '/dashboard/product-list' }] },
-            // { title: 'Inventory', icon: 'fa-solid fa-warehouse', subItems: [{ title: 'Stock History', link: '/dashboard/stock-history' }] },
-            {
-                title: 'Stock Management',
-                icon: 'fa-solid fa-warehouse',
-                subItems: [{ title: 'Stock History', link: '/dashboard/stock-history' }]
-            },
-            {
-                title: 'Purchases & Sales',
-                icon: 'fa-solid fa-shopping-cart',
-                subItems: [
-                    { title: 'Sale Purchase List', icon: 'fa-solid fa-cart-plus', link: '/dashboard/sale-service-list' },
-                    { title: 'Sale & Service Entry', icon: 'fa-solid fa-cash-register', link: '/dashboard/sale-service-entry' },
-
-                ]
-            },
-            // { title: 'Sale & Service Entry', icon: 'fa-solid fa-cash-register', link: '/dashboard/sale-service-entry' },
-            {
-                title: 'Users', icon: 'fa-solid fa-users', subItems: [
-                    { title: 'Add Employee', link: '/dashboard/add-employee' },
-                    { title: 'Employee List', link: '/dashboard/employee-list' },
-                    { title: 'Add Customer', link: '/dashboard/add-customer' },
-                    { title: 'Customer List', link: '/dashboard/customer-list' },
-                ]
-            },
-
-            // Inventory
-            { title: 'Change Password', icon: 'fa-solid fa-key', link: '/dashboard/change-password' },
-            { title: 'Order History', icon: 'fas fa-history', link: '/dashboard/order-list' },
-            // { title: 'Blog', icon: 'fa-solid fa-envelope', subItems: [{ title: 'Post List', link: '/dashboard/post-list' }] },
-        ],
-
-        employee: [
-            { title: 'Dashboard', icon: 'fa-solid fa-chart-line', link: '/dashboard' },
-            { title: 'Sale & Service Entry', icon: 'fa-solid fa-cash-register', link: '/dashboard/sale-service-entry' },
-            // {
-            //     title: 'Purchases & Sales',
-            //     icon: 'fa-solid fa-shopping-cart',
-            //     subItems: [
-            //         { title: 'Purchase Entry', icon: 'fa-solid fa-cart-plus', link: '/dashboard/purchase-entry' },
-            //         { title: 'Sale & Service Entry', icon: 'fa-solid fa-cash-register', link: '/dashboard/sale-service-entry' },
-            //         { title: 'Sale Return', icon: 'fa-solid fa-undo-alt', link: '/dashboard/sale-return' },
-            //         { title: 'Purchase Return', icon: 'fa-solid fa-reply', link: '/dashboard/purchase-return' },
-            //     ]
-            // },
-            // { title: 'Products', icon: 'fa-solid fa-truck-fast', link: '/dashboard/products' },
-            { title: 'Products', icon: 'fa-solid fa-truck-fast', link: '/dashboard/cart-products' },
-            { title: 'My Order', icon: ' fa-solid fa-list-alt', link: '/dashboard/my-orders' },
-
-
-
-
-            // { title: 'heckout ', icon: 'fa-solid fa-truck-fast', link: '/dashboard/checkout ' },
-            {
-                title: 'Customers', icon: 'fa-solid fa-users', subItems: [
-                    { title: 'Add Customer', link: '/dashboard/add-customer' },
-                    // { title: 'Customer List', link: '/dashboard/customer-list' },
-                ]
-            },
-            { title: 'Change Password', icon: 'fa-solid fa-key', link: '/dashboard/change-password' },
-
-        ],
-
-        customer: [
-            { title: 'Dashboard', icon: 'fa-solid fa-chart-line', link: '/dashboard' },
-            { title: 'Change Password', icon: 'fa-solid fa-key', link: '/dashboard/change-password' },
-        ]
+  const handleSidebarClose = () => {
+        const sidebar = document.getElementById('sidebar');
+        console.log("sidebar is ======>",sidebar)
+        if (sidebar) {
+             sidebar.classList.add('close');
+            sidebar.classList.remove('open');
+        }
     };
 
-    // Get menu items based on the user's role
-    const menuItems = menuItemsByRole[userRole] || [];
+
+    const menuItems = [
+        { title: 'Dashboard', icon: 'fa-solid fa-chart-line', link: '/dashboard' },
+
+        {
+            title: 'Logo',
+            icon: 'fa-solid fa-image',
+            subItems: [
+                { title: 'Logo List', link: '/dashboard/logo-list' },
+            ],
+        },
+
+        {
+            title: 'Banner',
+            icon: 'fa-solid fa-images',
+            subItems: [
+                { title: 'Banner List', link: '/dashboard/banner-list' },
+                //   { title: ' List', link: '/dashboard/banner-list' },
+                //     { title: 'Banner List', link: '/dashboard/banner-list' },
+            ],
+        },
+        {
+            title: 'Pages Management',
+            icon: 'fa-solid fa-file-alt',
+            subItems: [
+                { title: 'About Page', icon: 'fa-solid fa-info-circle', link: '/dashboard/pages-about' },
+                { title: 'Contact Page', icon: 'fa-solid fa-envelope', link: '/dashboard/pages-contact' },
+                { title: 'Terms & Conditions', icon: 'fa-solid fa-file-contract', link: '/dashboard/pages-terms' },
+                { title: 'Privacy Policy', icon: 'fa-solid fa-user-shield', link: '/dashboard/pages-privacy' },
+                { title: 'FAQ Page', icon: 'fa-solid fa-question-circle', link: '/dashboard/pages-faq' },
+            ],
+        },
+
+
+        {
+            title: 'Category',
+            icon: 'fa-solid fa-layer-group',
+
+            subItems: [
+                { title: 'Category List', link: '/dashboard/category-list' },
+            ],
+        },
+
+
+
+        {
+            title: 'Sub Category',
+            icon: 'fa fa-list-alt',
+            subItems: [
+                {
+                    title: 'Sub Category List',
+                    link: '/dashboard/sub-category-list'
+                }]
+        },
+        {
+            title: 'Courses',
+            icon: 'fa-solid fa-book',
+
+            subItems: [
+                { title: 'Course List', link: '/dashboard/course-list' },
+            ],
+        },
+
+        {
+            title: 'Students',
+            icon: 'fa-solid fa-user-graduate',
+            subItems: [
+                { title: 'Registered Students', icon: 'fa-solid fa-list', link: '/dashboard/students-list' },
+                { title: 'Add Student', icon: 'fa-solid fa-user-plus', link: '/dashboard/student-add' },
+                { title: 'Enrolled Courses', icon: 'fa-solid fa-book-open', link: '/dashboard/student-courses' },
+                { title: 'Progress & Performance', icon: 'fa-solid fa-chart-line', link: '/dashboard/student-progress' },
+                { title: 'Certificates', icon: 'fa-solid fa-certificate', link: '/dashboard/student-certificates' },
+            ],
+        },
+        {
+            title: 'Packages',
+            icon: 'fa-solid fa-box-open',
+            subItems: [
+                { title: 'Package List', icon: 'fa-solid fa-list', link: '/dashboard/package-list' },
+                { title: 'Add Package', icon: 'fa-solid fa-plus', link: '/dashboard/package-add' },
+                { title: 'Pricing Plans', icon: 'fa-solid fa-tags', link: '/dashboard/package-pricing' },
+            ],
+        },
+        {
+            title: 'Orders',
+            icon: 'fa-solid fa-shopping-cart',
+            subItems: [
+                { title: 'Order List', icon: 'fa-solid fa-list', link: '/dashboard/orders-list' },
+                { title: 'Pending Orders', icon: 'fa-solid fa-clock', link: '/dashboard/orders-pending' },
+                { title: 'Completed Orders', icon: 'fa-solid fa-check', link: '/dashboard/orders-completed' },
+            ],
+        },
+
+        {
+            title: 'Blog',
+            icon: 'fa-solid fa-blog',
+            subItems: [
+                { title: 'Blog List', icon: 'fa-solid fa-list', link: '/dashboard/blog-list' },
+                { title: 'Add Blog', icon: 'fa-solid fa-plus', link: '/dashboard/blog-add' },
+                { title: 'Categories', icon: 'fa-solid fa-tags', link: '/dashboard/blog-category' },
+            ],
+        },
+        {
+            title: 'SEO',
+            icon: 'fa-solid fa-search',
+            subItems: [
+                { title: 'SEO Settings', icon: 'fa-solid fa-gear', link: '/dashboard/seo-settings' },
+                { title: 'Meta Tags', icon: 'fa-solid fa-tags', link: '/dashboard/meta-tags' },
+                { title: 'Sitemap', icon: 'fa-solid fa-sitemap', link: '/dashboard/sitemap' },
+            ],
+        },
+        {
+            title: 'Change Password',
+            icon: 'fa-solid fa-key',
+            link: '/dashboard/change-password',
+        },
+        {
+            title: 'Web Info',
+            icon: 'fa-solid fa-globe',
+            link: '/dashboard/web-info',
+        },
+
+
+
+
+    ];
 
     return (
         <aside>
             <div className="sidebar border-end bg-white overflow-hidden sticky-top" id="sidebar">
                 <div className="sidebar-header d-flex align-items-center justify-content-between ps-4">
-                    {/* <div className="logo">
-                        <img className="default-logo" src="https://www.sigmasoftwares.org/images/logo.gif" width="115" alt="Logo" />
-                        <img className="collapsed-logo" src="https://www.sigmasoftwares.org/images/logo.gif" alt="Logo" style={{ width: '28px' }} />
-                    </div> */}
                     <div className="logo">
-                        <img className="default-logo" src={logos && logos[0] ? `${BASE_URL}${logos[0].image}` : "/default-img.png"} width="115" alt="Logo" />
-                        <img className="collapsed-logo" src={logos && logos[0] ? `${BASE_URL}${logos[0].image}` : "/default-img.png"} alt="Logo" style={{ width: '28px' }} />
+                        <img
+                            className="default-logo"
+                            // src={logoApi ? logoApi[1]?.logo_img : "/img/pixer_dark.webp"}
+                            src="https://digitalindialearning.com/img/logo.png"
+                            width="115"
+                            alt="Logo"
+                        />
+                        <img
+                            className="collapsed-logo"
+                            // src={logoApi ? logoApi[3]?.logo_img : "/img/pixer-collapse-logo.webp"}
+                            src="https://digitalindialearning.com/img/logo.png"
+                            alt="Logo"
+                            style={{ width: '28px' }}
+                        />
                     </div>
                     <div>
-                        <button className="btn d-md-none" type="button">
+                        <button className="btn d-md-none" type="button" onClick={handleSidebarClose}>
                             <div className="icon icon-sm sidebar-close-btn">
                                 <i className="fa-solid fa-close"></i>
                             </div>
@@ -300,8 +184,9 @@ const SideBar = () => {
                 </div>
                 <div className="h-100 overflow-auto p-4" id="sidebar-scroller">
                     <ul className="menu">
+
                         {menuItems.map((item, index) => (
-                            <li key={index} className={`menu-item ${item.subItems ? `has-menu-sub ${sidebarOpen && itemIndex === index ? 'open' : ''}` : ''}`}>
+                            <li key={index} className={`menu-item ${item.subItems ? ` has-menu-sub ${sidebarOpen && itemIndex === index ? 'open' : ''}` : ''}`}>
                                 <Link to={item.link || '#'} className="menu-link" onClick={() => handleClick(index)}>
                                     <span className="menu-icon"><i className={item.icon}></i></span>
                                     <span className="menu-text">{item.title}</span>
@@ -325,4 +210,3 @@ const SideBar = () => {
 };
 
 export default SideBar;
-

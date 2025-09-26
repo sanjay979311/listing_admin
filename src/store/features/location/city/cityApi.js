@@ -1,5 +1,7 @@
 
 
+
+
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 // Base query with credentials
@@ -21,10 +23,15 @@ export const cityApi = createApi({
             query: (id) => `city/${id}`,
             providesTags: (result, error, id) => [{ type: 'City', id }],
         }),
+        getCityByCountryId: builder.query({
+            query: (id) => `city/get-city-by-country/${id}`,
+            providesTags: (result, error, id) => [{ type: 'City', id }],
+        }),
         getCityByStateId: builder.query({
             query: (id) => `city/get-city-by-state/${id}`,
             providesTags: (result, error, id) => [{ type: 'City', id }],
         }),
+
         addCity: builder.mutation({
             query: (cityData) => ({
                 url: 'city',
@@ -57,8 +64,10 @@ export const cityApi = createApi({
 export const {
     useGetCityQuery,
     useGetCityByIdQuery,
+    useGetCityByCountryIdQuery,
     useGetCityByStateIdQuery,
     useAddCityMutation,
     useUpdateCityMutation,
     useDeleteCityMutation,
+
 } = cityApi;

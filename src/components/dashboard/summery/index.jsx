@@ -76,48 +76,7 @@ const Summary = () => {
     };
 
     const summaryCards = [
-        {
-            title: "Total Orders",
-            value: stats.totalOrders || "0",
-            icon: <FaShoppingBag size={20} />,
-            color: "#5e72e4",
-            link: "/dashboard/order-list",
-            trend: stats.orderTrend || 0
-        },
-        {
-            title: "Total Entries",
-            value: stats.totalSaleEntries || "0", // 👈 using the backend value
-            icon: <FaClipboardList size={20} />,   // ✅ any icon you like (import from react-icons)
-            color: "#FFD700",                     // ✨ pick any color
-            link: "/dashboard/sale-service-list",  // 🔗 change this route to your actual sale entry list page
-            trend: stats.entryTrend || 0          // Optional trend value (if available)
-        },
-        {
-            title: "Total Products",
-            value: stats.totalProducts || "0",
-            icon: <FaBoxes size={20} />,
-            color: "#2dce89",
-            link: "/dashboard/product-list",
-            trend: stats.productTrend || 0
-        },
-        {
-            title: "Total Stock",
-            value: stats.totalStock || "0",
-            icon: <FaWarehouse size={20} />,
-            color: "#007bff",
-            link: "/dashboard/stock-history",
-            trend: stats.stockTrend || 0
-        },
-        {
-            title: "Out of Stock",
-            value: stats.outOfStockProducts || "0",
-            icon: <FaExclamationTriangle size={20} />,
-            color: "#dc3545",
-            link: "/dashboard/stock-history",
-            trend: stats.outOfStockTrend || 0
-        },
-
-        {
+         {
             title: "Total Categories",
             value: stats.totalCategories || "0",
             icon: <FaTags size={20} />,
@@ -125,30 +84,66 @@ const Summary = () => {
             link: "/dashboard/category-list",
             trend: stats.categoryTrend || 0
         },
-        {
-            title: "Sub Categories",
-            value: stats.totalSubCategories || "0",
-            icon: <FaLayerGroup size={20} />,
-            color: "#fb6340",
-            link: "/dashboard/sub-category-list",
-            trend: stats.subCategoryTrend || 0
-        },
-        {
-            title: "Total Customers",
-            value: stats.totalCustomers || "0",
-            icon: <FaUsers size={20} />,
-            color: "#f5365c",
-            link: "/dashboard/customer-list",
-            trend: stats.customerTrend || 0
-        },
-        {
-            title: "Total Employees",
-            value: stats.totalEmployees || "0",
-            icon: <FaUsers size={20} />,
-            color: "#ffd600",
-            link: "/dashboard/employee-list",
-            trend: stats.employeeTrend || 0
-        },
+        
+        // {
+        //     title: "Total Orders",
+        //     value: stats.totalOrders || "0",
+        //     icon: <FaShoppingBag size={20} />,
+        //     color: "#5e72e4",
+        //     link: "/dashboard/order-list",
+        //     trend: stats.orderTrend || 0
+        // },
+       
+        // {
+        //     title: "Total Course",
+        //     value: stats.totalProducts || "0",
+        //     icon: <FaBoxes size={20} />,
+        //     color: "#2dce89",
+        //     link: "/dashboard/product-list",
+        //     trend: stats.productTrend || 0
+        // },
+        // {
+        //     title: "Total Stock",
+        //     value: stats.totalStock || "0",
+        //     icon: <FaWarehouse size={20} />,
+        //     color: "#007bff",
+        //     link: "/dashboard/stock-history",
+        //     trend: stats.stockTrend || 0
+        // },
+        // {
+        //     title: "Out of Stock",
+        //     value: stats.outOfStockProducts || "0",
+        //     icon: <FaExclamationTriangle size={20} />,
+        //     color: "#dc3545",
+        //     link: "/dashboard/stock-history",
+        //     trend: stats.outOfStockTrend || 0
+        // },
+
+       
+        // {
+        //     title: "Sub Categories",
+        //     value: stats.totalSubCategories || "0",
+        //     icon: <FaLayerGroup size={20} />,
+        //     color: "#fb6340",
+        //     link: "/dashboard/sub-category-list",
+        //     trend: stats.subCategoryTrend || 0
+        // },
+        // {
+        //     title: "Total Customers",
+        //     value: stats.totalCustomers || "0",
+        //     icon: <FaUsers size={20} />,
+        //     color: "#f5365c",
+        //     link: "/dashboard/customer-list",
+        //     trend: stats.customerTrend || 0
+        // },
+        // {
+        //     title: "Total Employees",
+        //     value: stats.totalEmployees || "0",
+        //     icon: <FaUsers size={20} />,
+        //     color: "#ffd600",
+        //     link: "/dashboard/employee-list",
+        //     trend: stats.employeeTrend || 0
+        // },
         {
             title: "Total Banners",
             value: stats.totalBanners || "0",

@@ -117,6 +117,7 @@
 // export default SubCategoryList;
 
 
+
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSubCategories, deleteSubCategory, resetDeleteStatus } from '../../../store/reducers/subCategoryReducer';
