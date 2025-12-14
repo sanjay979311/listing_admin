@@ -8,6 +8,8 @@ import logoReducer from './reducers/logoReducer';
 import { countryApi } from './features/location/country/countryApi'; // Import bannerApi
 import { stateApi } from './features/location/state/stateApi';
 import { cityApi } from './features/location/city/cityApi';
+import { areaApi } from './features/location/area/areaApi';
+import { postApi } from './features/post/postApi';
 import { logoApi } from './features/logo/logoApi';
 import { webInfoApi } from './features/web-info/webInfoApi';
 import { bannerApi } from './features/banner/bannerApi';
@@ -24,9 +26,11 @@ const rootReducer = combineReducers({
     [countryApi.reducerPath]: countryApi.reducer,
     [stateApi.reducerPath]: stateApi.reducer,
     [cityApi.reducerPath]: cityApi.reducer,
+    [areaApi.reducerPath]: areaApi.reducer,
+    [postApi.reducerPath]: postApi.reducer,
     [logoApi.reducerPath]: logoApi.reducer,
     [categoryApi.reducerPath]: categoryApi.reducer,
-     [bannerApi.reducerPath]: bannerApi.reducer,
+    [bannerApi.reducerPath]: bannerApi.reducer,
     [webInfoApi.reducerPath]: webInfoApi.reducer,
     [dashboardApi.reducerPath]: dashboardApi.reducer,
 

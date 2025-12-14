@@ -1,0 +1,138 @@
+/* Container for buttons */
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  /* space between buttons */
+  margin-bottom: 20px;
+}
+
+/* All buttons */
+.tab-buttons .btn {
+  min-width: 140px;
+  /* consistent width */
+  padding: 14px 28px;
+  /* bigger buttons */
+  border-radius: 12px;
+  /* rounded corners */
+  font-weight: 600;
+  /* bold text */
+  font-size: 1.1rem;
+  /* slightly bigger font */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* soft shadow */
+}
+
+/* Hover effect */
+.tab-buttons .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Active tab style */
+.tab-buttons .btn.active {
+  background-color: #28a745;
+  /* Bootstrap success green */
+  color: #fff;
+  border-color: #28a745;
+}
+
+
+/* Rounded ellipsis button */
+
+
+/* Dropdown menu styling */
+.custom-dropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  min-width: 220px;
+  z-index: 1000;
+  overflow: hidden;
+  padding: 5px 0;
+}
+
+/* Dropdown items */
+.custom-dropdown li a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.custom-dropdown li a:hover {
+  background-color: #f0f4ff;
+  color: #007bff;
+}
+
+/* Delete item in red */
+.custom-dropdown li a.delete-item {
+  color: #dc3545;
+}
+
+.custom-dropdown li a.delete-item:hover {
+  background-color: #f8d7da;
+  color: #a71d2a;
+}
+
+
+/* status */
+
+/* Status pill base */
+.status-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  min-width: 70px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Active status */
+.status-pill.active {
+  background-color: #28a745;
+  /* Green */
+}
+
+/* Inactive status */
+.status-pill.inactive {
+  background-color: #dc3545;
+  /* Red */
+}
+
+/* Optional hover effect */
+.status-pill:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* top container */
+
+/* Top card flex */
+.card-body.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Page title */
+.page-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Add button aligned right */

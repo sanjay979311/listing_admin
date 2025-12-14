@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "creator": {
+      "name": "John Doe",
+      "email": "admin@example.com",
+      "photo": "https://demo.creativeitem.com/academy/uploads/user_image/optimized/8909eeea03ebf8188af7df4b99639ba3.jpg",
+      "profileUrl": "https://demo.creativeitem.com/academy/home/instructor_page/1"
+    },
+    "title": "AI-Based learning is the future of Corporate Training",
+    "titleUrl": "https://demo.creativeitem.com/academy/blog/details/ai-based-learning-is-the-future-of-corporate-training/4",
+    "category": "Education",
+    "date": "22 Dec 2021",
+    "status": "Active"
+  },
+  {
+    "id": 2,
+    "creator": {
+      "name": "John Doe",
+      "email": "admin@example.com",
+      "photo": "https://demo.creativeitem.com/academy/uploads/user_image/optimized/8909eeea03ebf8188af7df4b99639ba3.jpg",
+      "profileUrl": "https://demo.creativeitem.com/academy/home/instructor_page/1"
+    },
+    "title": "Balance your priorities in life and enjoy a beautiful life",
+    "titleUrl": "https://demo.creativeitem.com/academy/blog/details/balance-your-priorities-in-life-and-enjoy-a-beautiful-life/3",
+    "category": "Lifestyle",
+    "date": "22 Dec 2021",
+    "status": "Active"
+  },
+  {
+    "id": 3,
+    "creator": {
+      "name": "John Doe",
+      "email": "admin@example.com",
+      "photo": "https://demo.creativeitem.com/academy/uploads/user_image/optimized/8909eeea03ebf8188af7df4b99639ba3.jpg",
+      "profileUrl": "https://demo.creativeitem.com/academy/home/instructor_page/1"
+    },
+    "title": "Parent Power: Will We Choose Pitchforks or Partnerships?",
+    "titleUrl": "https://demo.creativeitem.com/academy/blog/details/parent-power-will-we-choose-pitchforks-or-partnerships/2",
+    "category": "Education",
+    "date": "22 Dec 2021",
+    "status": "Active"
+  },
+  {
+    "id": 4,
+    "creator": {
+      "name": "John Doe",
+      "email": "admin@example.com",
+      "photo": "https://demo.creativeitem.com/academy/uploads/user_image/optimized/8909eeea03ebf8188af7df4b99639ba3.jpg",
+      "profileUrl": "https://demo.creativeitem.com/academy/home/instructor_page/1"
+    },
+    "title": "4 Ways To Maximize Student Participation In Online Learning",
+    "titleUrl": "https://demo.creativeitem.com/academy/blog/details/4-ways-to-maximize-student-participation-in-online-learning/1",
+    "category": "Education",
+    "date": "22 Dec 2021",
+    "status": "Active"
+  }
+]

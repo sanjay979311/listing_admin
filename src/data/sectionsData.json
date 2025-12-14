@@ -1,0 +1,205 @@
+[
+  {
+    "id": 1,
+    "title": "Section 1",
+    "description": "Introduction to React",
+    "sortLessonUrl": "#",
+    "editSectionUrl": "#",
+    "deleteSectionUrl": "#",
+    "lessons": [
+      {
+        "id": 101,
+        "title": "Lesson 1",
+        "description": "JSX Basics",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      },
+      {
+        "id": 102,
+        "title": "Lesson 2",
+        "description": "Components",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      },
+      {
+        "id": 103,
+        "title": "Lesson 3",
+        "description": "Props & State",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      },
+      {
+        "id": 104,
+        "title": "Lesson 4",
+        "description": "Event Handling",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Section 2",
+    "description": "State & Props",
+    "sortLessonUrl": "#",
+    "editSectionUrl": "#",
+    "deleteSectionUrl": "#",
+    "lessons": [
+      {
+        "id": 201,
+        "title": "Lesson 1",
+        "description": "State Management",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      },
+      {
+        "id": 202,
+        "title": "Lesson 2",
+        "description": "Props Drilling",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      },
+      {
+        "id": 203,
+        "title": "Lesson 3",
+        "description": "Lifting State Up",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Section 3",
+    "description": "Routing in React",
+    "sortLessonUrl": "#",
+    "editSectionUrl": "#",
+    "deleteSectionUrl": "#",
+    "lessons": [
+      {
+        "id": 301,
+        "title": "Lesson 1",
+        "description": "React Router Basics",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      },
+      {
+        "id": 302,
+        "title": "Lesson 2",
+        "description": "Nested Routes",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      },
+      {
+        "id": 303,
+        "title": "Lesson 3",
+        "description": "Route Params",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Section 4",
+    "description": "Hooks in React",
+    "sortLessonUrl": "#",
+    "editSectionUrl": "#",
+    "deleteSectionUrl": "#",
+    "lessons": [
+      {
+        "id": 401,
+        "title": "Lesson 1",
+        "description": "useState",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      },
+      {
+        "id": 402,
+        "title": "Lesson 2",
+        "description": "useEffect",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      },
+      {
+        "id": 403,
+        "title": "Lesson 3",
+        "description": "Custom Hooks",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      },
+      {
+        "id": 404,
+        "title": "Lesson 4",
+        "description": "useContext",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Section 5",
+    "description": "Advanced Topics",
+    "sortLessonUrl": "#",
+    "editSectionUrl": "#",
+    "deleteSectionUrl": "#",
+    "lessons": [
+      {
+        "id": 501,
+        "title": "Lesson 1",
+        "description": "Context API",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      },
+      {
+        "id": 502,
+        "title": "Lesson 2",
+        "description": "React Performance",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      },
+      {
+        "id": 503,
+        "title": "Lesson 3",
+        "description": "Error Boundaries",
+        "icon": "https://demo.creativeitem.com/academy/assets/backend/lesson_icon/video.png",
+        "resourceUrl": "#",
+        "editUrl": "#",
+        "deleteUrl": "#"
+      }
+    ]
+  }
+]

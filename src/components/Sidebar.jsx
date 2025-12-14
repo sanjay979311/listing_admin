@@ -18,11 +18,11 @@ const SideBar = () => {
         setSidebarOpen(!sidebarOpen);
     };
 
-  const handleSidebarClose = () => {
+    const handleSidebarClose = () => {
         const sidebar = document.getElementById('sidebar');
-        console.log("sidebar is ======>",sidebar)
+        console.log("sidebar is ======>", sidebar)
         if (sidebar) {
-             sidebar.classList.add('close');
+            sidebar.classList.add('close');
             sidebar.classList.remove('open');
         }
     };
@@ -38,27 +38,33 @@ const SideBar = () => {
                 { title: 'Logo List', link: '/dashboard/logo-list' },
             ],
         },
+        {
+            title: 'Location', icon: 'fa-solid fa-location-dot', subItems: [
+                { title: 'Country List', link: '/dashboard/country-list' },
+                { title: 'State List', link: '/dashboard/state-list' },
+                { title: 'City List', link: '/dashboard/city-list' },
+                { title: 'Area List', link: '/dashboard/area-list' } // ✅ Added Area here
+            ]
+        },
+        // {
+        //     title: 'Banner',
+        //     icon: 'fa-solid fa-images',
+        //     subItems: [
+        //         { title: 'Banner List', link: '/dashboard/banner-list' },
 
-        {
-            title: 'Banner',
-            icon: 'fa-solid fa-images',
-            subItems: [
-                { title: 'Banner List', link: '/dashboard/banner-list' },
-                //   { title: ' List', link: '/dashboard/banner-list' },
-                //     { title: 'Banner List', link: '/dashboard/banner-list' },
-            ],
-        },
-        {
-            title: 'Pages Management',
-            icon: 'fa-solid fa-file-alt',
-            subItems: [
-                { title: 'About Page', icon: 'fa-solid fa-info-circle', link: '/dashboard/pages-about' },
-                { title: 'Contact Page', icon: 'fa-solid fa-envelope', link: '/dashboard/pages-contact' },
-                { title: 'Terms & Conditions', icon: 'fa-solid fa-file-contract', link: '/dashboard/pages-terms' },
-                { title: 'Privacy Policy', icon: 'fa-solid fa-user-shield', link: '/dashboard/pages-privacy' },
-                { title: 'FAQ Page', icon: 'fa-solid fa-question-circle', link: '/dashboard/pages-faq' },
-            ],
-        },
+        //     ],
+        // },
+        // {
+        //     title: 'Pages Management',
+        //     icon: 'fa-solid fa-file-alt',
+        //     subItems: [
+        //         { title: 'About Page', icon: 'fa-solid fa-info-circle', link: '/dashboard/pages-about' },
+        //         { title: 'Contact Page', icon: 'fa-solid fa-envelope', link: '/dashboard/pages-contact' },
+        //         { title: 'Terms & Conditions', icon: 'fa-solid fa-file-contract', link: '/dashboard/pages-terms' },
+        //         { title: 'Privacy Policy', icon: 'fa-solid fa-user-shield', link: '/dashboard/pages-privacy' },
+        //         { title: 'FAQ Page', icon: 'fa-solid fa-question-circle', link: '/dashboard/pages-faq' },
+        //     ],
+        // },
 
 
         {
@@ -72,63 +78,85 @@ const SideBar = () => {
 
 
 
-        {
-            title: 'Sub Category',
-            icon: 'fa fa-list-alt',
-            subItems: [
-                {
-                    title: 'Sub Category List',
-                    link: '/dashboard/sub-category-list'
-                }]
-        },
-        {
-            title: 'Courses',
-            icon: 'fa-solid fa-book',
+        // {
+        //     title: 'Sub Category',
+        //     icon: 'fa fa-list-alt',
+        //     subItems: [
+        //         {
+        //             title: 'Sub Category List',
+        //             link: '/dashboard/sub-category-list'
+        //         }]
+        // },
+        // {
+        //     title: 'Courses',
+        //     icon: 'fa-solid fa-book',
 
-            subItems: [
-                { title: 'Course List', link: '/dashboard/course-list' },
-            ],
-        },
+        //     subItems: [
+        //         { title: 'Manage Course', link: '/dashboard/manage-course' },
+        //     ],
+        // },
 
         {
-            title: 'Students',
+            title: 'Users',
             icon: 'fa-solid fa-user-graduate',
             subItems: [
-                { title: 'Registered Students', icon: 'fa-solid fa-list', link: '/dashboard/students-list' },
-                { title: 'Add Student', icon: 'fa-solid fa-user-plus', link: '/dashboard/student-add' },
-                { title: 'Enrolled Courses', icon: 'fa-solid fa-book-open', link: '/dashboard/student-courses' },
+                { title: 'Manage Students', icon: 'fa-solid fa-list', link: '/dashboard/student-list' },
+                { title: 'Add New Student', icon: 'fa-solid fa-user-plus', link: '/dashboard/add-student' },
+                { title: 'Manage Student', icon: 'fa-solid fa-book-open', link: '/dashboard/student-courses' },
                 { title: 'Progress & Performance', icon: 'fa-solid fa-chart-line', link: '/dashboard/student-progress' },
                 { title: 'Certificates', icon: 'fa-solid fa-certificate', link: '/dashboard/student-certificates' },
             ],
         },
-        {
-            title: 'Packages',
-            icon: 'fa-solid fa-box-open',
-            subItems: [
-                { title: 'Package List', icon: 'fa-solid fa-list', link: '/dashboard/package-list' },
-                { title: 'Add Package', icon: 'fa-solid fa-plus', link: '/dashboard/package-add' },
-                { title: 'Pricing Plans', icon: 'fa-solid fa-tags', link: '/dashboard/package-pricing' },
-            ],
-        },
-        {
-            title: 'Orders',
-            icon: 'fa-solid fa-shopping-cart',
-            subItems: [
-                { title: 'Order List', icon: 'fa-solid fa-list', link: '/dashboard/orders-list' },
-                { title: 'Pending Orders', icon: 'fa-solid fa-clock', link: '/dashboard/orders-pending' },
-                { title: 'Completed Orders', icon: 'fa-solid fa-check', link: '/dashboard/orders-completed' },
-            ],
-        },
+        // {
+        //     title: 'Packages',
+        //     icon: 'fa-solid fa-box-open',
+        //     subItems: [
+        //         { title: 'Package List', icon: 'fa-solid fa-list', link: '/dashboard/package-list' },
+        //         { title: 'Add Package', icon: 'fa-solid fa-plus', link: '/dashboard/add-package' },
 
+        //     ],
+        // },
+        // {
+        //     title: 'Faq',
+        //     icon: 'fa-solid fa-circle-question',
+        //     subItems: [
+        //         { title: 'Faq List', icon: 'fa-solid fa-list', link: '/dashboard/faq-list' },
+        //         { title: 'Add Faq', icon: 'fa-solid fa-plus', link: '/dashboard/add-faq' },
+
+        //     ],
+        // },
+
+        // {
+        //     title: 'Orders',
+        //     icon: 'fa-solid fa-shopping-cart',
+        //     subItems: [
+        //         { title: 'Order List', icon: 'fa-solid fa-list', link: '/dashboard/orders-list' },
+        //         { title: 'Pending Orders', icon: 'fa-solid fa-clock', link: '/dashboard/orders-pending' },
+        //         { title: 'Completed Orders', icon: 'fa-solid fa-check', link: '/dashboard/orders-completed' },
+        //     ],
+        // },
+
+        // {
+        //     title: 'Blog',
+        //     icon: 'fa-solid fa-blog',
+        //     subItems: [
+        //         { title: 'Blog List', icon: 'fa-solid fa-list', link: '/dashboard/blog-list' },
+        //         { title: 'Add Blog', icon: 'fa-solid fa-plus', link: '/dashboard/add-blog' },
+
+        //     ],
+        // },
         {
-            title: 'Blog',
-            icon: 'fa-solid fa-blog',
-            subItems: [
-                { title: 'Blog List', icon: 'fa-solid fa-list', link: '/dashboard/blog-list' },
-                { title: 'Add Blog', icon: 'fa-solid fa-plus', link: '/dashboard/blog-add' },
-                { title: 'Categories', icon: 'fa-solid fa-tags', link: '/dashboard/blog-category' },
-            ],
-        },
+    title: 'Ads Management',
+    icon: 'fa-solid fa-bullhorn',
+    subItems: [
+        { title: 'Ads List', icon: 'fa-solid fa-list', link: '/dashboard/ads-list' },
+        // { title: 'Add Listing', icon: 'fa-solid fa-plus', link: '/dashboard/add-listing' },
+        { title: 'Create Multiple Ads', icon: 'fa-solid fa-layer-group', link: '/dashboard/create-bulk-ads' },
+        // { title: 'Edit / Delete Listings', icon: 'fa-solid fa-pen-to-square', link: '/dashboard/manage-listings' },
+    ],
+},
+
+
         {
             title: 'SEO',
             icon: 'fa-solid fa-search',
@@ -149,7 +177,13 @@ const SideBar = () => {
             link: '/dashboard/web-info',
         },
 
-
+        {
+            title: 'Settings',
+            icon: 'fa-solid fa-gear',
+            subItems: [
+                { title: 'SEO Template', link: '/dashboard/seo-template' }
+            ]
+        }
 
 
     ];
@@ -182,8 +216,8 @@ const SideBar = () => {
                         </button>
                     </div>
                 </div>
-                <div className="h-100 overflow-auto p-4" id="sidebar-scroller">
-                    <ul className="menu">
+                <div className="h-100 overflow-auto p-4 " id="sidebar-scroller">
+                    <ul className="menu mb-5">
 
                         {menuItems.map((item, index) => (
                             <li key={index} className={`menu-item ${item.subItems ? ` has-menu-sub ${sidebarOpen && itemIndex === index ? 'open' : ''}` : ''}`}>

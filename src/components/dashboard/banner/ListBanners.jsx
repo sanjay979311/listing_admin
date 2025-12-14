@@ -7,9 +7,10 @@ import "react-toastify/dist/ReactToastify.css";
 import DataTable from "react-data-table-component";
 import { useGetBannersQuery, useDeleteBannerMutation } from "../../../store/features/banner/bannerApi";
 import BASE_URL from "../../../utils/imageConfig";
-
+import { IoMdArrowDown } from "react-icons/io";
 const Banner = () => {
     // Fetch banner data
+
     const { data: banners, isLoading, error, refetch } = useGetBannersQuery();
     const [deleteBanner] = useDeleteBannerMutation();
 
@@ -60,7 +61,13 @@ const Banner = () => {
                 <img
                     src={`${BASE_URL}${row?.image || "/default-img.png"}`}
                     alt={row.name}
-                    style={{ width: "50px", height: "50px", borderRadius: "8px", objectFit: "cover" }}
+                    style={{
+                        borderRadius: "8px",
+                        width: "50px",
+                        height: "50px",
+                        marginTop: "5px",
+                        marginBottom: "5px",
+                    }}
                 />
             ),
         },
@@ -114,7 +121,43 @@ const Banner = () => {
     return (
         <>
             <ToastContainer />
-            <div className="container-fluid">
+
+            <div className="container-fluid mt-4">
+                <div className="row row-cols-1 g-3 g-md-5">
+                    <div className="col">
+                        <div className="bg-white px-4 py-5 rounded-3 shadow-sm">
+                            {/* Header: Add Course + Search */}
+                            <div className="d-flex justify-content-between align-items-center mb-4 flex-column flex-md-row gap-3">
+                                <Link to="/dashboard/add-banner" className="btn btn-primary">
+                                    + Add Banner
+                                </Link>
+                                <input
+                                    className="form-control w-50"
+                                    type="text"
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    placeholder="Search banners..."
+                                />
+                            </div>
+
+                            {/* Data Table */}
+                            <DataTable
+                                columns={columns}
+                                data={currentItems}
+                                pagination
+                                highlightOnHover
+                                striped
+                                responsive
+                                fixedHeader
+                                sortIcon={<IoMdArrowDown />}
+                                defaultSortFieldId={3} // default sort by Course Title
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* <div className="container-fluid">
                 <div className="row row-cols-1 g-3 g-md-5">
                     <div className="col">
                         <div className="bg-white px-4 py-5 rounded-3">
@@ -164,7 +207,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     );
 };

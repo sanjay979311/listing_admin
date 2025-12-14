@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "photo": "https://demo.creativeitem.com/academy/uploads/user_image/optimized/aa6c72f7b21f21498acda57322b2a052.jpg",
+    "name": "Signe Thompson",
+    "email": "student@example.com",
+    "phone": "",
+    "enrolledCourses": [
+      "WordPress Theme Development with Bootstrap",
+      "Adobe Illustrator CC - Essentials Training Course",
+      "The Complete Graphic Design Theory",
+      "Build Websites from Scratch with HTML & CSS",
+      "Scorm drawing course",
+      "Build Websites from Scratch with HTML & CSS"
+    ]
+  },
+  {
+    "id": 2,
+    "photo": "https://demo.creativeitem.com/academy/uploads/user_image/optimized/41146b28f9a50262e27b04d954dfe96e.jpg",
+    "name": "Kasia Jarco",
+    "email": "adrian@example.com",
+    "phone": "",
+    "enrolledCourses": ["Scorm drawing course"]
+  },
+  {
+    "id": 3,
+    "photo": "https://demo.creativeitem.com/academy/uploads/user_image/optimized/6.jpg",
+    "name": "Naomi Hill",
+    "email": "levinho@example.com",
+    "phone": "",
+    "enrolledCourses": [
+      "How to shoot cinematic tech videos like Apple",
+      "Complete Guitar Lessons System",
+      "The Complete Graphic Design Theory"
+    ]
+  },
+  {
+    "id": 4,
+    "photo": "https://demo.creativeitem.com/academy/uploads/user_image/optimized/4a10c102363a2913a511c51fd261fd1e.jpg",
+    "name": "Mathew Anderson",
+    "email": "instructor@example.com",
+    "phone": "",
+    "enrolledCourses": ["The Complete Python Bootcamp From Zero to Hero"]
+  },
+  {
+    "id": 5,
+    "photo": "https://demo.creativeitem.com/academy/uploads/user_image/optimized/d51cd8671704a89b62c455ba98fc8ea4.jpg",
+    "name": "Mildred Pearson",
+    "email": "izzo@example.com",
+    "phone": "",
+    "enrolledCourses": [
+      "Complete Guitar Lessons System",
+      "Javascript Understanding the Weird Parts - The First 3.5 Hours"
+    ]
+  },
+  {
+    "id": 6,
+    "photo": "https://demo.creativeitem.com/academy/uploads/user_image/optimized/b376e5db5f47f6fbc61b392ea66885b7.jpg",
+    "name": "Robert Wilson",
+    "email": "robert@example.com",
+    "phone": "",
+    "enrolledCourses": []
+  },
+  {
+    "id": 7,
+    "photo": "https://demo.creativeitem.com/academy/uploads/user_image/optimized/0df6a70de62be391898d150cefffde8d.jpg",
+    "name": "Clara Sara",
+    "email": "demo@gmail.com",
+    "phone": "000222333444",
+    "enrolledCourses": [
+      "Introduction and Learn bootstrap",
+      "Introduction and Learn bootstrap",
+      "Introduction and Learn bootstrap",
+      "Introduction and Learn bootstrap",
+      "Introduction and Learn bootstrap",
+      "Introduction and Learn bootstrap",
+      "Complete Blender Creator: Learn 3D Modelling",
+      "Build Websites from Scratch with HTML & CSS",
+      "Introduction and Learn bootstrap"
+    ]
+  },
+  {
+    "id": 8,
+    "photo": "https://demo.creativeitem.com/academy/uploads/user_image/optimized/c65a8b0a510168ef0a311b1f46c7f918.jpg",
+    "name": "Rosalie Ruth",
+    "email": "rosalie@example.com",
+    "phone": "+1 (439) 901-9876",
+    "enrolledCourses": []
+  }
+]

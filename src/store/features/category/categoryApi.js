@@ -23,6 +23,10 @@ export const categoryApi = createApi({
             query: (id) => `category/${id}`,
             providesTags: (result, error, id) => [{ type: 'category', id }],
         }),
+        getSubCategoryByCatId: builder.query({
+            query: (catId) => `sub-category/by-category/${catId}`,
+            providesTags: (result, error, id) => [{ type: 'Category', id }],
+        }),
         addCategory: builder.mutation({
             query: (categoryData) => ({
                 url: 'category/create',
@@ -54,6 +58,7 @@ export const categoryApi = createApi({
 
 export const {
     useGetCategoryByIdQuery,
+    useGetSubCategoryByCatIdQuery,
     useGetCategoryQuery,
     useAddCategoryMutation,
     useUpdateCategoryMutation,
